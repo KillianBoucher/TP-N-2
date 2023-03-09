@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculatrice Simple</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container ">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Calculatrice Simple</h3>
+					</div>
+					<div class="panel-body">
+						<form action="calc.php" method="post">
+							<div class="form-group">
+								<label for="nombre1">Nombre 1:</label>
+								<input type="number" class="form-control" id="nombre1" name="nombre1" required>
+							</div>
+							<div class="form-group">
+								<label for="nombre2">Nombre 2:</label>
+								<input type="number" class="form-control" id="nombre2" name="nombre2" required>
+							</div>
+							<div class="form-group">
+								<label for="operation">Operation:</label>
+								<select class="form-control" id="operation" name="operation">
+									<option value="+">Addition</option>
+									<option value="-">Soustraction</option>
+									<option value="*">Multiplication</option>
+									<option value="/">Division</option>
+								</select>
+							</div>
+							<button type="submit" class="btn btn-primary">Calculer</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
