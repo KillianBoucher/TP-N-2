@@ -1,26 +1,44 @@
 <?php
+function addition($a, $b) {
+    return $a + $b;
+}
+
+function soustraction($a, $b) {
+    return $a - $b;
+}
+
+function multiplication($a, $b) {
+    return $a * $b;
+}
+
+function division($a, $b) {
+    if($b == 0) {
+        return "Division par zéro!";
+    } else {
+        return $a / $b; 
+    }
+}
+
 $nombre1 = $_POST['nombre1'];
 $nombre2 = $_POST['nombre2'];
 $operation = $_POST['operation'];
 
 switch($operation) {
-	case '+':
-		$resultat = $nombre1 + $nombre2;
-		break;
-	case '-':
-		$resultat = $nombre1 - $nombre2;
-		break;
-	case '*':
-		$resultat = $nombre1 * $nombre2;
-		break;
-	case '/':
-		if($nombre2 == 0) {
-			$resultat = "Division par zéro!";
-		} else {
-			$resultat = $nombre1 / $nombre2;
-		}
-		break;
+    case '+':
+        $resultat = addition($nombre1, $nombre2);
+        break;
+    case '-':
+        $resultat = soustraction($nombre1, $nombre2);
+        break;
+    case '*':
+        $resultat = multiplication($nombre1, $nombre2);
+        break;
+    case '/':
+        $resultat = division($nombre1, $nombre2);
+        break;
 }
+?>
+
 ?>
 <!DOCTYPE html>
 <html>
